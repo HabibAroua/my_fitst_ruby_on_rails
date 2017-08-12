@@ -1,0 +1,17 @@
+<!doctype html>
+    <html>
+        <head>
+            <title>Edit Post</title>
+        </head>
+        <body>
+            <h1>Edit Post</h1>
+            <br>
+            <%= form_for @posts do |f| %>
+                <%= f.text_field :name %>
+                <br>
+                <%= f.text_area :content %>
+                <br>
+                <%= f.submit 'Edit' %>
+            <% end %>
+        </body>
+    </html>
