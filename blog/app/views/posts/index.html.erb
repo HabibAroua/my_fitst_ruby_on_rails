@@ -1,27 +1,20 @@
-<!doctype html>
-    <html>
-        <head>
-           <title>Article</title> 
-        </head>
-        <body>
-            <h1>All article</h1>
-            <% if flash[:notice] %>
-            <div class="alert alert-success">
-                <%= flash[:notice] %>
-            </div>
-            <% end %>
-            <ul>
-                <% @posts.each do |post| %>
-                    <li><a href="<%= posts_path(id: post.id, name: post.name) %>"><%= post.name %></a></li>
-                    <li><%= link_to post.name,post %></li> -
-                    <%= link_to "Edit", [:edit,post] %>-
-                    <%= link_to 'Delete', post, method: :delete , date: {confirm:'Do you want to delete this article ?'} %>
-                <% end %>
-            </ul>
-            <p><%= posts_path %></p>
-            <br>
-            <a href="<%= android_path %>">Android</a>
-            <br>
-            <%= link_to 'Create an article', new_post_path %>
-        </body>
-    </html>
+
+<h1>All article</h1>
+<% if flash[:notice] %>
+    <div class="alert alert-success">
+        <%= flash[:notice] %>
+    </div>
+<% end %>
+<ul>
+<% @posts.each do |post| %>
+    <li><a href="<%= posts_path(id: post.id, name: post.name) %>"><%= post.name %></a></li>
+    <li><%= link_to post.name,post %></li> -
+    <%= link_to "Edit", [:edit,post] %>-
+    <%= link_to 'Delete', post, method: :delete , date: {confirm:'Do you want to delete this article ?'} %>
+<% end %>
+</ul>
+<p><%= posts_path %></p>
+<br>
+<a href="<%= android_path %>">Android</a>
+<br>
+<%= link_to 'Create an article', new_post_path %>

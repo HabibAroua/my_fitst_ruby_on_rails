@@ -1,19 +1,12 @@
-<!doctype html>
-    <html>
-        <head>
-            <title>Show article</title>
-        </head>
-        <body>
-            <p><%= link_to 'Return to post pages', Post %></p>
-            <p><%= link_to 'Android', android_url %></p>
-           <h1><%= @posts.name %></h1>
-           <p><%= @posts.content %></p>
-           <br>
-           <p><%=  if @posts.created_at==nil
-                        'Erreur'
-                    else
-                        time_ago_in_words(@posts.created_at)
-                    end
-                %> </p> 
-        </body>
-    </html>
+<p><%= link_to 'Return to post pages', Post %></p>
+<p><%= link_to 'Android', android_url %></p>
+<h1><%= @posts.name %></h1>
+<p><%= @posts.content %></p>
+<br>
+<p><%=  if @posts.created_at==nil
+            'Erreur'
+        else
+            time_ago_in_words(@posts.created_at)
+        end
+%> </p> 
+ 
