@@ -1,0 +1,12 @@
+<h1>Habib#index</h1>
+<p>Find me in app/views/habib/index.html.erb</p>
+
+
+<%= link_to('Welcome' ,  {:action =>'welcome' }) %>
+<%= link_to('Index' , {:action =>'index'}) %>
+<%= link_to('Test', {:action=>'test'} )%>
+<%= link_to('page id', {:action=>'welcome',:page=>5 , :id=>8}) %>7
+<br>
+<h5>Method 2</h5>
+Page = <%= @page %>
+Id   = <%= @id   %>
