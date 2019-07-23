@@ -39,4 +39,5 @@ class HabibController < ApplicationController
 		@name='Safa'
 		render('test')
 	end
+	
 end
