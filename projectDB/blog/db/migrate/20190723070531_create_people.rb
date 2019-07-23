@@ -1,5 +1,4 @@
 class CreatePeople < ActiveRecord::Migration[5.1]
-  
   #def change
     #create_table :people do |t|
 
@@ -23,4 +22,5 @@ class CreatePeople < ActiveRecord::Migration[5.1]
   def down
     drop_table :persons
   end
+  
 end
