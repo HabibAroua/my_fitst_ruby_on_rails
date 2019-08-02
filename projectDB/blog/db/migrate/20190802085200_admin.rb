@@ -14,4 +14,8 @@ class Admin < ActiveRecord::Migration[5.1]
   def down
     drop_table :admins
   end
+  
+  def rename
+    rename_table :admins, :mainadmin
+  end
 end
