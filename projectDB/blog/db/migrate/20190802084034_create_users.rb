@@ -10,7 +10,6 @@ class CreateUsers < ActiveRecord::Migration[5.1]
     create_table :persons do |t|
       t.column "firstName" , :string , :limit => 60
       t.column "lastName" , :string , :limit =>60
-      t.column "safa"     , :string , :limit=>50
       t.string "email" , :default=> '' , :null=>false
       t.string "password" , :limit =>255
       #t.datetime "create_at"

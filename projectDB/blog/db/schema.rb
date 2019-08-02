@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20190802084034) do
   create_table "persons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "firstName", limit: 60
     t.string "lastName", limit: 60
-    t.string "safa", limit: 50
     t.string "email", default: "", null: false
     t.string "password"
     t.datetime "created_at", null: false
