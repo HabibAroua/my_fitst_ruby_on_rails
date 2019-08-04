@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190802085200) do
+ActiveRecord::Schema.define(version: 20190804120457) do
 
   create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "login", limit: 60
@@ -19,11 +19,43 @@ ActiveRecord::Schema.define(version: 20190802085200) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.integer "topic_id"
+    t.string "name"
+    t.string "permalink"
+    t.integer "postition"
+    t.boolean "visible", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["permalink"], name: "index_pages_on_permalink"
+    t.index ["topic_id"], name: "index_pages_on_topic_id"
+  end
+
   create_table "persons", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "firstName", limit: 60
     t.string "lastName", limit: 60
     t.string "email", default: "", null: false
     t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sections", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.integer "page_id"
+    t.string "name"
+    t.integer "position"
+    t.boolean "visible", default: false
+    t.string "content_type"
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["page_id"], name: "index_sections_on_page_id"
+  end
+
+  create_table "topics", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "name"
+    t.integer "position"
+    t.boolean "visible", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
