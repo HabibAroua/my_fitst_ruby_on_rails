@@ -16,4 +16,5 @@ class CreatePages < ActiveRecord::Migration[5.1]
   def down
     drop_table :pages
   end
+  
 end
