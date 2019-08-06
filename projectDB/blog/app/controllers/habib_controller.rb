@@ -40,4 +40,8 @@ class HabibController < ApplicationController
 		render('test')
 	end
 	
+	def page
+		@x='Habib'
+		render('page')
+	end
 end
