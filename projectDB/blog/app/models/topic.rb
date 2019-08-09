@@ -5,5 +5,6 @@ class Topic < ApplicationRecord
 	scope :visible , lambda{ where(:visible => true) }
 	scope :invisible , lambda{where(:visible => false ) }
 	scope :sorted , lambda {order(:position)}
+	scope :show , lambda {puts("Normal Message")}
 	
 end
