@@ -1,3 +1,9 @@
+<script>
+	function show()
+	{
+		alert("Hello world");
+	}
+</script>
 <h1>Habib#index</h1>
 <p>Find me in app/views/habib/index.html.erb</p>
 
@@ -10,3 +16,12 @@
 <h5>Method 2</h5>
 Page = <%= @page %>
 Id   = <%= @id   %>
+
+<% @topic.each do |t| %>
+	<%= t.id %><br>
+	<%= t.name %><br>
+	<%= t.position %><br>
+	<%= t.visible %><br>
+	<button onclick="show()">Click</button>
+	
+<% end %>

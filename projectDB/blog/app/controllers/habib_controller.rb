@@ -12,6 +12,7 @@ class HabibController < ApplicationController
 	def index
 		@id = params['id']
 		@page = params['page']
+		@topic =Topic.all
 		render('index')
 	end
   
