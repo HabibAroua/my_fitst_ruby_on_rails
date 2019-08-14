@@ -1,10 +1,11 @@
 class AdminUserPageCreation < ActiveRecord::Migration[5.1]
+  
   def up
     create_table :admin_users_pages do |t|
       t.integer "id_admin_users"
       t.integer "page_id"
     end
-    add_index("id_admin_users","page_id")
+    add_index("admin_users_page",["id_admin_users","page_id"])
   end
   
   def down
