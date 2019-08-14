@@ -7,5 +7,5 @@ class Topic < ApplicationRecord
 	scope :sorted , lambda {order(:position)}
 	scope :show , lambda {puts("Normal Message")}
 	
-	has_one :page
+	has_many :pages # with plural we add S in the last of word
 end
