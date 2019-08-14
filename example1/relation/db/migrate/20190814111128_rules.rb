@@ -1,7 +1,7 @@
 class Rules < ActiveRecord::Migration[5.1]
   def up
     create_table :rules do |t|
-
+      t.column "name" , :string , :limit => 255
       t.timestamps
     end
   end
