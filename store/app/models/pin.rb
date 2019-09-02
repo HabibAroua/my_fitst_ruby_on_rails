@@ -1,3 +1,2 @@
 class Pin < ApplicationRecord
-	
 end
