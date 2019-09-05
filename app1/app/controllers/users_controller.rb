@@ -66,8 +66,8 @@ class UsersController < ApplicationController
   end
   
   def habib
-    @user=User.find(1)
-    @x=params[:post][:title]
+    @user=User.find(params[:id])
+    #@x=params[:post][:title]
   end
   private
     # Use callbacks to share common setup or constraints between actions.
