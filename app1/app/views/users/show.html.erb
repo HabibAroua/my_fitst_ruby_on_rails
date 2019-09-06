@@ -19,10 +19,14 @@
 <%= link_to 'Back', users_path %>
 <h1>Add new book</h1>
 <%= form_tag :action => "habib" do %>
+<p><label for="book_title">Name</label>
+  <%= text_field 'post', 'name' %></p>
+  <p><label for="book_title">Email</label>
+  <%= text_field 'post', 'email' %></p>
   <p><label for="book_title">Title</label>
   <%= text_field 'post', 'title' %></p>
-  <p><label for="book_price">Price</label>
-  <%= text_field 'post', 'name' %></p>
+  <p><label for="book_title">Position</label>
+  <%= number_field 'post', 'position' %></p>
   <p><label for="book_description">Description</label><br/>
   <%= text_area 'post', 'content' %></p>
 <%= submit_tag "Create" %>
