@@ -29,6 +29,9 @@
   <%= number_field 'post', 'position' %></p>
   <p><label for="book_description">Description</label><br/>
   <%= text_area 'post', 'content' %></p>
+  <p><label for="book_options">Options</label><br/>
+  
+<%= select(:post, :id, [['Lisbon', 1], ['Madrid', 2], ['Berlin', 3]]) %>
 <%= submit_tag "Create" %>
 <% end -%>
 

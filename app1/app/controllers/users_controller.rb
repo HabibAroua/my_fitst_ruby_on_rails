@@ -73,7 +73,7 @@ class UsersController < ApplicationController
     @p.title=params[:post][:title]
     @p.content=params[:post][:content]
     @user.posts << @p
-    redirect_to :back
+    @id=params[:post][:id]
   end
   
   private
