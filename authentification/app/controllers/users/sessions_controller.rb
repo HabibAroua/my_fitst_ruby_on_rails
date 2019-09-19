@@ -6,7 +6,8 @@ class Users::SessionsController < Devise::SessionsController
   # GET /resource/sign_in
    def new
      super
-     @x='habib'
+     @y=1
+     #render 'sign_in'
    end
 
   # POST /resource/sign_in
