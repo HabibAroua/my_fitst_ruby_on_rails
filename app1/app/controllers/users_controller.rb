@@ -74,6 +74,7 @@ class UsersController < ApplicationController
     @p.content=params[:post][:content]
     @user.posts << @p
     @id=params[:post][:id]
+    redirect_to :action=>'show'
   end
   
   private
